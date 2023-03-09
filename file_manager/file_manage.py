@@ -74,8 +74,7 @@ def create_database():
     """Creates the SQLite database and table"""
     conn = sqlite3.connect(database)
     c = conn.cursor()
-    c.execute(f'CREATE TABLE {table} (name text, path text, size 
-integer)')
+    c.execute(f'CREATE TABLE {table} (name text, path text, size integer)')
     conn.commit()
     conn.close()
 
